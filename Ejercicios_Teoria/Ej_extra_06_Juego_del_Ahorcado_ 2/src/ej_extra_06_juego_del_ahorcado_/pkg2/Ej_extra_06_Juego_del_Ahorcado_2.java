@@ -13,7 +13,10 @@ public class Ej_extra_06_Juego_del_Ahorcado_2 {
         
         AhorcadoServices aS = new AhorcadoServices();
         Ahorcado a = aS.crearAhorcado();
-        String letra; 
+        String letra;
+        String opcion;
+        String palabraArriesgada;
+        boolean arriesgar
         
         Scanner leer = new Scanner(System.in);
         System.out.println("Bien.. ya estamos listo para jugar al AHORCADO");
@@ -46,7 +49,30 @@ public class Ej_extra_06_Juego_del_Ahorcado_2 {
             System.out.println();
             System.out.print("El ahoracado viene asi .... ");
             aS.MostrarAhorcado(a);
-            System.out.println();            
+            System.out.println();
+            arriesgar = true;
+            do  {
+                System.out.print("Qures arriesgar la palabra?: (s/n) ");
+                opcion = leer.nextLine();
+                System.out.println();
+                opcion = opcion.toLowerCase();
+                switch (opcion) {
+                    "s" : 
+                            System.out.print("Ingrese la palabra: ");
+                            palabraArriesgada = leer.nextLine();
+                            palabraArriesgada = palabraArriesgada.toLoweCase();
+                            
+                            arriesgar = false;
+                            break;
+                    "n" :       
+                            System.out.print("Bien... seguimos jugando... ");
+                            arriesgar = false;
+                            break;
+                    default : 
+                            System.out.print("Esa opcion no existe.. ingrese la opcion correcta... ");
+                            break;
+                }                
+            } while (arrisgar);            
         } while ((!(aS.finalAhorcado(a))) && (!(aS.palabraAcertada(a))));
         if (aS.palabraAcertada(a))  {
                 System.out.println("Muy bien.... Ganaste!!!!!");

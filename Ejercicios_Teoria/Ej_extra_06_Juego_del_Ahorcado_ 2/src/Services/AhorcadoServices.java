@@ -155,7 +155,7 @@ public class AhorcadoServices {
         
         vectorAux = a.getPalabraJugada();
         for (int i = 0; i < a.getExtensionPalabra(); i++)   {
-            System.out.print(vectorAux[i]);
+            System.out.print(vectorAux[i]+" ");
         }
     }
 
@@ -165,7 +165,7 @@ public class AhorcadoServices {
         
         vectorAux = a.getAhorcado();
         for (int i = 0; i < a.getPosicionAhorcado(); i++)   {
-            System.out.print(vectorAux[i]);
+            System.out.print(vectorAux[i]+" ");
         }
     }
         
